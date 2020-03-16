@@ -1,0 +1,621 @@
+{
+		"comment0": "Metadata.json - Insert the e-book's metadata here, so that the content.opf and toc.ncx files can be filled. May use data for ONIXtoo. WIP",
+
+		"comment1": "Folder metadata - This contains the names of the technical folders, if you change the default names please update them here.",
+		"containerFolder": "OEBPS",
+		"cssFolder": "styles",
+		"imagesFolder": "images",
+		"fontsFolder": "fonts",
+
+		"comment2": "Technical metadata - This is the where the cover image is specified. Recommended to use ePub V2.0.over 3.for epubVersion and Reflowable rather than Fixed for textPresentation (unless doing a project that requires a specific layout). mobiCover and generateKindle are currently unused but added for futureproofing.",
+		"epubCover": "cover.png",
+		"mobiCover": "cover.jpg",
+		"fileName": "HoffmansPatience",
+		"epubVersion": "2.0.1",
+		"textPresentation": "Reflowable",
+		"generateKindle": "no",
+		"generateGoogle": "yes",
+
+		"comment3": "Book metadata - Information about the e-book itself. Language is specified with ISO 639-1. ISBN number can be declared, as well as the Amazon ASIN. Rights can be worldwide, country specific or under a permissable license such as Creative-Commons SA",
+		"title": "Professor Hoffman's Patience Games",
+		"titleShort": "Professor Hoffman's Patience Games",
+		"creator": "Professor Hoffman, Hal Motley",
+		"subject": "Card Games, Reference",
+		"publisher": "",
+		"ISBN": "-",
+		"ASIN": "",
+		"language": "en",
+		"rights": "CC-BY-SA-NC 3.0, Public Domain",
+
+		"comment4": "This is the page order that the e-book has. The first number before the colon is the page order, the second is the indentation (default is 1, allowed upto 4), third is the page name and fourth is file itself.",
+		"pages": [
+					{
+						"pageNumber": "0",
+						"indentation": "1",
+						"pageName": "Front Cover",
+						"fileName": "bookcover.xhtml"
+					},
+					{
+						"pageNumber": "1",
+						"indentation": "1",
+						"pageName": "Title",
+						"fileName": "title.xhtml"
+					},
+					{
+						"pageNumber": "2",
+						"indentation": "1",
+						"pageName": "Indicia",
+						"fileName": "indicia.xhtml"
+					},
+					{
+						"pageNumber": "3",
+						"indentation": "1",
+						"pageName": "Foreword",
+						"fileName": "foreword.xhtml"
+					},
+					{
+						"pageNumber": "4",
+						"indentation": "1",
+						"pageName": "Glossary",
+						"fileName": "glossary.xhtml"
+					},
+					{
+						"pageNumber": "5",
+						"indentation": "1",
+						"pageName": "Table of Contents",
+						"fileName": "toc.xhtml"
+					},
+					{
+						"pageNumber": "6",
+						"indentation": "1",
+						"pageName": "Illustrated Book of Patience Games",
+						"fileName": "illustratedbookofpatiencegames.xhtml"
+					},
+					{
+						"pageNumber": "7",
+						"indentation": "1",
+						"pageName": "Introduction",
+						"fileName": "introduction.xhtml"
+					},
+					{
+						"pageNumber": "8",
+						"indentation": "1",
+						"pageName": "1. The Wish",
+						"fileName": "thewish.xhtml"
+					},
+					{
+						"pageNumber": "9",
+						"indentation": "1",
+						"pageName": "2. The Star",
+						"fileName": "thestar.xhtml"
+					},
+					{
+						"pageNumber": "10",
+						"indentation": "1",
+						"pageName": "3. Hope",
+						"fileName": "hope.xhtml"
+					},
+					{
+						"pageNumber": "11",
+						"indentation": "1",
+						"pageName": "4. The Amazons",
+						"fileName": "theamazons.xhtml"
+					},
+					{
+						"pageNumber": "12",
+						"indentation": "1",
+						"pageName": "5. The Harvest",
+						"fileName": "theharvest.xhtml"
+					},
+					{
+						"pageNumber": "13",
+						"indentation": "1",
+						"pageName": "6. Royal Marriage",
+						"fileName": "royalmarriage.xhtml"
+					},
+					{
+						"pageNumber": "14",
+						"indentation": "1",
+						"pageName": "7. Quadrille",
+						"fileName": "quadrille.xhtml"
+					},
+					{
+						"pageNumber": "15",
+						"indentation": "1",
+						"pageName": "8. Cæsar",
+						"fileName": "caesar.xhtml"
+					},
+					{
+						"pageNumber": "16",
+						"indentation": "1",
+						"pageName": "9. Nestor",
+						"fileName": "nestor.xhtml"
+					},
+					{
+						"pageNumber": "17",
+						"indentation": "1",
+						"pageName": "10. Hidden Cards",
+						"fileName": "hiddencards.xhtml"
+					},
+					{
+						"pageNumber": "18",
+						"indentation": "1",
+						"pageName": "11. The Dial (No. 1)",
+						"fileName": "thedial1.xhtml"
+					},
+					{
+						"pageNumber": "19",
+						"indentation": "1",
+						"pageName": "12. The Dial (No. 2)",
+						"fileName": "thedial2.xhtml"
+					},
+					{
+						"pageNumber": "20",
+						"indentation": "1",
+						"pageName": "13. Elevens (No. 1)",
+						"fileName": "elevens1.xhtml"
+					},
+					{
+						"pageNumber": "21",
+						"indentation": "1",
+						"pageName": "14. Elevens (No. 2)",
+						"fileName": "elevens2.xhtml"
+					},
+					{
+						"pageNumber": "22",
+						"indentation": "1",
+						"pageName": "15. Robert",
+						"fileName": "robert.xhtml"
+					},
+					{
+						"pageNumber": "23",
+						"indentation": "1",
+						"pageName": "16. The Pyramid",
+						"fileName": "thepyramid.xhtml"
+					},
+					{
+						"pageNumber": "24",
+						"indentation": "1",
+						"pageName": "17. The Five Court Cards",
+						"fileName": "thefivecourtcards.xhtml"
+					},
+					{
+						"pageNumber": "25",
+						"indentation": "1",
+						"pageName": "18. The Talkative",
+						"fileName": "thetalkative.xhtml"
+					},
+					{
+						"pageNumber": "26",
+						"indentation": "1",
+						"pageName": "19. The Four Seasons",
+						"fileName": "thefourseasons.xhtml"
+					},
+					{
+						"pageNumber": "27",
+						"indentation": "1",
+						"pageName": "20. Thirteens",
+						"fileName": "thirteens.xhtml"
+					},
+					{
+						"pageNumber": "28",
+						"indentation": "1",
+						"pageName": "21. The Fairest (No. 1)",
+						"fileName": "thefairest1.xhtml"
+					},
+					{
+						"pageNumber": "29",
+						"indentation": "1",
+						"pageName": "22. The Fairest (No. 2)",
+						"fileName": "thefairest2.xhtml"
+					},
+					{
+						"pageNumber": "30",
+						"indentation": "1",
+						"pageName": "23. The Storehouse",
+						"fileName": "thestorehouse.xhtml"
+					},
+					{
+						"pageNumber": "31",
+						"indentation": "1",
+						"pageName": "24. &#8220;Covering&#8221; Patience",
+						"fileName": "coveringpatience.xhtml"
+					},
+					{
+						"pageNumber": "32",
+						"indentation": "1",
+						"pageName": "25. The Indefatigable",
+						"fileName": "theindefatigable.xhtml"
+					},
+					{
+						"pageNumber": "33",
+						"indentation": "1",
+						"pageName": "26. Valentine",
+						"fileName": "valentine.xhtml"
+					},
+					{
+						"pageNumber": "34",
+						"indentation": "1",
+						"pageName": "27. The Trefoil",
+						"fileName": "thetrefoil.xhtml"
+					},
+					{
+						"pageNumber": "35",
+						"indentation": "1",
+						"pageName": "28. The Corners",
+						"fileName": "thecorners.xhtml"
+					},
+					{
+						"pageNumber": "36",
+						"indentation": "1",
+						"pageName": "29. The Cotillon",
+						"fileName": "thecotillon.xhtml"
+					},
+					{
+						"pageNumber": "37",
+						"indentation": "1",
+						"pageName": "30. The Crescent",
+						"fileName": "thecrescent.xhtml"
+					},
+					{
+						"pageNumber": "38",
+						"indentation": "1",
+						"pageName": "31. Lucas",
+						"fileName": "lucas.xhtml"
+					},
+					{
+						"pageNumber": "39",
+						"indentation": "1",
+						"pageName": "32. The Constitution",
+						"fileName": "theconstitution.xhtml"
+					},
+					{
+						"pageNumber": "40",
+						"indentation": "1",
+						"pageName": "33. The Four Corners",
+						"fileName": "thefourcorners.xhtml"
+					},
+					{
+						"pageNumber": "41",
+						"indentation": "1",
+						"pageName": "34. The Reserves",
+						"fileName": "thereserves.xhtml"
+					},
+					{
+						"pageNumber": "42",
+						"indentation": "1",
+						"pageName": "35. Rouge et Noir",
+						"fileName": "rougeetnoir.xhtml"
+					},
+					{
+						"pageNumber": "43",
+						"indentation": "1",
+						"pageName": "36. The Twos",
+						"fileName": "thetwos.xhtml"
+					},
+					{
+						"pageNumber": "44",
+						"indentation": "1",
+						"pageName": "37. The Kingdom",
+						"fileName": "thekingdom.xhtml"
+					},
+					{
+						"pageNumber": "45",
+						"indentation": "1",
+						"pageName": "38. The Patriarchs",
+						"fileName": "thepatriarchs.xhtml"
+					},
+					{
+						"pageNumber": "46",
+						"indentation": "1",
+						"pageName": "39. The Windmill",
+						"fileName": "thewindmill.xhtml"
+					},
+					{
+						"pageNumber": "47",
+						"indentation": "1",
+						"pageName": "40. The Parallels",
+						"fileName": "theparallels.xhtml"
+					},
+					{
+						"pageNumber": "48",
+						"indentation": "1",
+						"pageName": "41. The Blockade",
+						"fileName": "theblockade.xhtml"
+					},
+					{
+						"pageNumber": "49",
+						"indentation": "1",
+						"pageName": "42. The Sultan",
+						"fileName": "thesultan.xhtml"
+					},
+					{
+						"pageNumber": "50",
+						"indentation": "1",
+						"pageName": "43. The Lady of the Manor",
+						"fileName": "theladyofthemanor.xhtml"
+					},
+					{
+						"pageNumber": "51",
+						"indentation": "1",
+						"pageName": "44. The Wheatsheaf",
+						"fileName": "thewheatsheaf.xhtml"
+					},
+					{
+						"pageNumber": "52",
+						"indentation": "1",
+						"pageName": "45. The Juvenile",
+						"fileName": "thejuvenile.xhtml"
+					},
+					{
+						"pageNumber": "53",
+						"indentation": "1",
+						"pageName": "46. The Shah",
+						"fileName": "theshah.xhtml"
+					},
+					{
+						"pageNumber": "54",
+						"indentation": "1",
+						"pageName": "47. The Spark",
+						"fileName": "thespark.xhtml"
+					},
+					{
+						"pageNumber": "55",
+						"indentation": "1",
+						"pageName": "48. La Parisienne",
+						"fileName": "laparisienne.xhtml"
+					},
+					{
+						"pageNumber": "56",
+						"indentation": "1",
+						"pageName": "49. La Capricieuse",
+						"fileName": "lacapricieuse.xhtml"
+					},
+					{
+						"pageNumber": "57",
+						"indentation": "1",
+						"pageName": "50. La Nationale",
+						"fileName": "lanationale.xhtml"
+					},
+					{
+						"pageNumber": "58",
+						"indentation": "1",
+						"pageName": "51. The Fly",
+						"fileName": "thefly.xhtml"
+					},
+					{
+						"pageNumber": "59",
+						"indentation": "1",
+						"pageName": "52. Les Petits Paquets",
+						"fileName": "lespetitspaquets.xhtml"
+					},
+					{
+						"pageNumber": "60",
+						"indentation": "1",
+						"pageName": "53. Light and Shade",
+						"fileName": "lightandshade.xhtml"
+					},
+					{
+						"pageNumber": "61",
+						"indentation": "1",
+						"pageName": "54. The Plait",
+						"fileName": "theplait.xhtml"
+					},
+					{
+						"pageNumber": "62",
+						"indentation": "1",
+						"pageName": "55. Queens and Knaves",
+						"fileName": "queensandknaves.xhtml"
+					},
+					{
+						"pageNumber": "63",
+						"indentation": "1",
+						"pageName": "56. The Quadrangle",
+						"fileName": "thequadrangle.xhtml"
+					},
+					{
+						"pageNumber": "64",
+						"indentation": "1",
+						"pageName": "57. The Octagon",
+						"fileName": "theoctagon.xhtml"
+					},
+					{
+						"pageNumber": "65",
+						"indentation": "1",
+						"pageName": "58. The Picture Gallery",
+						"fileName": "thepicturegallery.xhtml"
+					},
+					{
+						"pageNumber": "66",
+						"indentation": "1",
+						"pageName": "59. The Kings",
+						"fileName": "thekings.xhtml"
+					},
+					{
+						"pageNumber": "67",
+						"indentation": "1",
+						"pageName": "60. The &#8220;Louis&#8221; Patience",
+						"fileName": "thelouispatience.xhtml"
+					},
+					{
+						"pageNumber": "68",
+						"indentation": "1",
+						"pageName": "61. The Wrangle",
+						"fileName": "thewrangle.xhtml"
+					},
+					{
+						"pageNumber": "69",
+						"indentation": "1",
+						"pageName": "62. Here and There",
+						"fileName": "hereandthere.xhtml"
+					},
+					{
+						"pageNumber": "70",
+						"indentation": "1",
+						"pageName": "63. Sympathy",
+						"fileName": "sympathy.xhtml"
+					},
+					{
+						"pageNumber": "71",
+						"indentation": "1",
+						"pageName": "Solution of the Cæsar Problem",
+						"fileName": "solutioncaesar.xhtml"
+					},
+					{
+						"pageNumber": "72",
+						"indentation": "1",
+						"pageName": "Selected Book of Patience Games",
+						"fileName": "selectedbookofpatiencegames.xhtml"
+					},
+					{
+						"pageNumber": "73",
+						"indentation": "1",
+						"pageName": "Preface",
+						"fileName": "preface.xhtml"
+					},
+					{
+						"pageNumber": "74",
+						"indentation": "1",
+						"pageName": "Introduction",
+						"fileName": "introduction2.xhtml"
+					},
+					{
+						"pageNumber": "75",
+						"indentation": "1",
+						"pageName": "1. The Original Patience",
+						"fileName": "theoriginalpatience.xhtml"
+					},
+					{
+						"pageNumber": "76",
+						"indentation": "1",
+						"pageName": "2. The Star",
+						"fileName": "thestar2.xhtml"
+					},
+					{
+						"pageNumber": "77",
+						"indentation": "1",
+						"pageName": "3. The Travellers",
+						"fileName": "thetravellers.xhtml"
+					},
+					{
+						"pageNumber": "78",
+						"indentation": "1",
+						"pageName": "4. The Carpet",
+						"fileName": "thecarpet.xhtml"
+					},
+					{
+						"pageNumber": "79",
+						"indentation": "1",
+						"pageName": "5. The Windmill",
+						"fileName": "thewindmill2.xhtml"
+					},
+					{
+						"pageNumber": "80",
+						"indentation": "1",
+						"pageName": "6. Heads and Tails",
+						"fileName": "headsandtails.xhtml"
+					},
+					{
+						"pageNumber": "81",
+						"indentation": "1",
+						"pageName": "7. The Demon",
+						"fileName": "thedemon.xhtml"
+					},
+					{
+						"pageNumber": "82",
+						"indentation": "1",
+						"pageName": "8. New York Patience",
+						"fileName": "newyorkpatience.xhtml"
+					},
+					{
+						"pageNumber": "83",
+						"indentation": "1",
+						"pageName": "9. St. Helena Patience",
+						"fileName": "sthelenapatience.xhtml"
+					},
+					{
+						"pageNumber": "84",
+						"indentation": "1",
+						"pageName": "10. Reversible Sequences",
+						"fileName": "reversiblesequences.xhtml"
+					},
+					{
+						"pageNumber": "85",
+						"indentation": "1",
+						"pageName": "11. Puss in the Corner",
+						"fileName": "pussinthecorner.xhtml"
+					},
+					{
+						"pageNumber": "86",
+						"indentation": "1",
+						"pageName": "12. The Four Marriages",
+						"fileName": "thefourmarriages.xhtml"
+					},
+					{
+						"pageNumber": "87",
+						"indentation": "1",
+						"pageName": "13. Backbone Patience",
+						"fileName": "backbonepatience.xhtml"
+					},
+					{
+						"pageNumber": "88",
+						"indentation": "1",
+						"pageName": "14. Bismarck Patience",
+						"fileName": "bismarckpatience.xhtml"
+					},
+					{
+						"pageNumber": "89",
+						"indentation": "1",
+						"pageName": "15. The Quadrilateral",
+						"fileName": "thequadrilateral.xhtml"
+					},
+					{
+						"pageNumber": "90",
+						"indentation": "1",
+						"pageName": "16. Roman Patience",
+						"fileName": "romanpatience.xhtml"
+					},
+					{
+						"pageNumber": "91",
+						"indentation": "1",
+						"pageName": "17. The Ladies’ Drawing Room",
+						"fileName": "theladiesdrawingroom.xhtml"
+					},
+					{
+						"pageNumber": "92",
+						"indentation": "1",
+						"pageName": "18. The Burleigh Patience",
+						"fileName": "theburleighpatience.xhtml"
+					},
+					{
+						"pageNumber": "93",
+						"indentation": "1",
+						"pageName": "19. Triplets",
+						"fileName": "triplets.xhtml"
+					},
+					{
+						"pageNumber": "94",
+						"indentation": "1",
+						"pageName": "20. Stop!",
+						"fileName": "stop.xhtml"
+					},
+					{
+						"pageNumber": "95",
+						"indentation": "1",
+						"pageName": "21. Golf Patience",
+						"fileName": "golfpatience.xhtml"
+					},
+					{
+						"pageNumber": "96",
+						"indentation": "1",
+						"pageName": "Cyclopædia of Card and Table Games",
+						"fileName": "cyclopaediaofcardandtablegames.xhtml"
+					},
+					{
+						"pageNumber": "97",
+						"indentation": "1",
+						"pageName": "Back Cover",
+						"fileName": "backcover.xhtml"
+					}
+				]
+}
