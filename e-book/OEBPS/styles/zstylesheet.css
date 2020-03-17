@@ -723,12 +723,17 @@ hr.black-line
 
 table.invisible
 {
-	border: 0px;
-	margin-top: 1em;
+	border: none;
+	margin-top: 0em;
 	margin-bottom: 1em;
-	margin-left: auto;
-	margin-right: auto;
-	width: 50%;
+	width: 100%;
+}
+
+td.invisible
+{
+	text-align: left;
+	font-size: 1em;
+	border: none;
 }
 
 table.caesar-solution
