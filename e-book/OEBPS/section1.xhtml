@@ -47,9 +47,9 @@
 
 	<h1 class="subheading">Floating point Types</h1>
 	<table class="invisible">
-		<tr><td class="invisible"><span class="mono">float</span></td><td class="invisible">Single precision floating point number</td><td class="invisible">typical size: 32 bits</td></tr>
-		<tr><td class="invisible"><span class="mono">double</span></td><td class="invisible">Double precision floating point number</td><td class="invisible">typical size: 64 bits</td></tr>
-		<tr><td class="invisible"><span class="mono">long double</span></td><td class="invisible">Possibly even bigger floating point number</td><td class="invisible">(somewhat obscure)</td></tr>
+		<tr><td class="invisible">&#160;&#160;&#160;<span class="mono">float</span></td><td class="invisible">Single precision floating point number</td><td class="invisible">typical size: 32 bits</td></tr>
+		<tr><td class="invisible">&#160;&#160;&#160;<span class="mono">double</span></td><td class="invisible">Double precision floating point number</td><td class="invisible">typical size: 64 bits</td></tr>
+		<tr><td class="invisible">&#160;&#160;&#160;<span class="mono">long double</span></td><td class="invisible">Possibly even bigger floating point number</td><td class="invisible">(somewhat obscure)</td></tr>
 	</table>
 
 	<p class="noindent top">Constants in the source code such as 3.14 default to type double unless the are suffixed with an 'f' (float) or 'l' (long double). Single precision equates to about 6 digits of precision and double is about 15 digits of precision. Most C programs use double for their computations. The main reason to use float is to save memory if many numbers need to be stored. The main thing to remember about floating point numbers is that they are inexact. For example, what is the value of the following double expression?</p>
@@ -59,8 +59,8 @@
 	<p class="noindent top">The sum may or may not be 1.0 exactly, and it may vary from one type of machine to another. For this reason, you should never compare floating numbers to each other for equality (==) -- use inequality (&lt;) comparisons instead. Realize that a correct C program run on different computers may produce slightly different outputs in the rightmost digits of its floating point computations.</p>
 
 	<h1 class="subheading">Comments</h1>
-	<p class="noindent">Comments in C are enclosed by slash/star pairs: /* .. comments .. */ which may cross multiple lines. C++ introduced a form of comment started by two slashes and extending to the end of the line: // comment until the line end<br/>The // comment form is so handy that many C compilers now also support it, although it is not technically part of the C language.</p>
-	<p>Along with well-chosen function names, comments are an important part of well written code. Comments should not just repeat what the code says. Comments should describe what the code accomplishes which is much more interesting than a translation of what each statement does. Comments should also narrate what is tricky or non-obvious about a section of code.</p>
+	<p class="noindent">Comments in C are enclosed by slash/star pairs: <span class="mono">/* .. comments .. */</span> which may cross multiple lines. C++ introduced a form of comment started by two slashes and extending to the end of the line: <span class="mono">// comment until the line end</span><br/>The // comment form is so handy that many C compilers now also support it, although it is not technically part of the C language.</p>
+	<p>Along with well-chosen function names, comments are an important part of well written code. Comments should not just repeat what the code says. Comments should describe what the code <b>accomplishes</b> which is much more interesting than a translation of what each statement does. Comments should also narrate what is tricky or non-obvious about a section of code.</p>
 
 	<h1 class="subheading">Variables</h1>
 	<p class="noindent">As in most languages, a variable declaration reserves and names an area in memory at run time to hold a value of particular type. Syntactically, C puts the type first followed by the name of the variable. The following declares an <span class="mono">int</span> variable named "<span class="mono">num</span>" and the 2nd line stores the value 42 into <span class="mono">num</span>.</p>
@@ -129,6 +129,15 @@
 	<p class="mono">&#160;&#160;...</p>
 
 	<p class="noindent top">will execute until the variable i takes on the value 10 at which time the expression (<span class="mono">i - 10</span>) will become false (i.e. 0). (we'll see the while() statement a bit later)</p>
+
+	<h1 class="subheading">Mathematical Operators</h1>
+	<p class="noindent">C includes the usual binary and unary arithmetic operators. See the appendix for the table of precedence. Personally, I just use parenthesis liberally to avoid any bugs due to a misunderstanding of precedence. The operators are sensitive to the type of the operands. So division (/) with two integer arguments will do integer division. If either argument is a float, it does floating point division. So (6/4) evaluates to 1 while (6/4.0) evaluates to 1.5 -- the 6 is promoted to 6.0 before the division.</p>
+
+	<p class="top"><span class="mono">+</span>&#160;&#160;Addition</p>
+	<p class="top"><span class="mono">-</span>&#160;&#160;Subtraction</p>
+	<p class="top"><span class="mono">/</span>&#160;&#160;Division</p>
+	<p class="top"><span class="mono">*</span>&#160;&#160;Multiplication</p>
+	<p class="top"><span class="mono">%</span>&#160;&#160;Remainder (mod)</p>
 
 </body>
 </html>
