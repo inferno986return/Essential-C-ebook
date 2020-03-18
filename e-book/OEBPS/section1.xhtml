@@ -54,13 +54,81 @@
 
 	<p class="noindent top">Constants in the source code such as 3.14 default to type double unless the are suffixed with an 'f' (float) or 'l' (long double). Single precision equates to about 6 digits of precision and double is about 15 digits of precision. Most C programs use double for their computations. The main reason to use float is to save memory if many numbers need to be stored. The main thing to remember about floating point numbers is that they are inexact. For example, what is the value of the following double expression?</p>
 
-	<p class="top"><span class="mono">(1.0/3.0 + 1.0/3.0 + 1.0/3.0)&#160;&#160;// is this equal to 1.0 exactly?</span></p>
+	<p class="mono top">(1.0/3.0 + 1.0/3.0 + 1.0/3.0)&#160;&#160;// is this equal to 1.0 exactly?</p>
 
 	<p class="noindent top">The sum may or may not be 1.0 exactly, and it may vary from one type of machine to another. For this reason, you should never compare floating numbers to each other for equality (==) -- use inequality (&lt;) comparisons instead. Realize that a correct C program run on different computers may produce slightly different outputs in the rightmost digits of its floating point computations.</p>
 
 	<h1 class="subheading">Comments</h1>
 	<p class="noindent">Comments in C are enclosed by slash/star pairs: /* .. comments .. */ which may cross multiple lines. C++ introduced a form of comment started by two slashes and extending to the end of the line: // comment until the line end<br/>The // comment form is so handy that many C compilers now also support it, although it is not technically part of the C language.</p>
 	<p>Along with well-chosen function names, comments are an important part of well written code. Comments should not just repeat what the code says. Comments should describe what the code accomplishes which is much more interesting than a translation of what each statement does. Comments should also narrate what is tricky or non-obvious about a section of code.</p>
+
+	<h1 class="subheading">Variables</h1>
+	<p class="noindent">As in most languages, a variable declaration reserves and names an area in memory at run time to hold a value of particular type. Syntactically, C puts the type first followed by the name of the variable. The following declares an <span class="mono">int</span> variable named "<span class="mono">num</span>" and the 2nd line stores the value 42 into <span class="mono">num</span>.</p>
+
+	<p class="mono top">int num;</p>
+	<p class="mono">num = 42;</p>
+	
+	<p class="mono top">num <span class="var-box">42</span></p>
+
+	<p class="noindent top">A variable corresponds to an area of memory which can store a value of the given type. Making a drawing is an excellent way to think about the variables in a program. Draw each variable as box with the current value inside the box. This may seem like a "beginner" technique, but when I'm buried in some horribly complex programming problem, I invariably resort to making a drawing to help think the problem through.</p>
+	<p>Variables, such as num, do not have their memory cleared or set in any way when they are allocated at run time. Variables start with random values, and it is up to the program to set them to something sensible before depending on their values.</p>
+	<p>Names in C are case sensitive so "x" and "X" refer to different variables. Names can contain digits and underscores (_), but may not begin with a digit. Multiple variables can be declared after the type by separating them with commas. C is a classical "compile time" language -- the names of the variables, their types, and their implementations are all flushed out by the compiler at compile time (as opposed to figuring such details out at run time like an interpreter).</p>
+
+	<p class="mono top">float x, y, z, X;</p>
+
+	<h1 class="subheading">Assignment Operator =</h1>
+	<p class="noindent">The assignment operator is the single equals sign (=).</p>
+	
+	<p class="mono top">i = 6;</p>
+	<p class="mono">i = i + 1;</p>
+
+	<p class="noindent top">The assignment operator copies the value from its right hand side to the variable on its left hand side. The assignment also acts as an expression which returns the newly assigned value. Some programmers will use that feature to write things like the following.</p>
+
+	<p class="mono top">y = (x = 2 * x);&#160;&#160;// double x, and also put x's new value in y</p>
+
+	<h1 class="subheading">Truncation</h1>
+	<p class="noindent">The opposite of promotion, truncation moves a value from a type to a smaller type. In that case, the compiler just drops the extra bits. It may or may not generate a compile time warning of the loss of information. Assigning from an integer to a smaller integer (e.g.. long to int, or int to char) drops the most significant bits. Assigning from a floating point type to an integer drops the fractional part of the number.</p>
+
+	<p class="mono top">char ch;</p>
+	<p class="mono">int i;</p>
+	
+	<p class="mono top">i = 321;</p>
+	<p class="mono">ch = i;&#160;&#160;// truncation of an int value to fit in a char</p>
+	<p class="mono">// ch is now 65</p>
+
+	<p class="noindent top">The assignment will drop the upper bits of the int 321. The lower 8 bits of the number 321 represents the number 65 (321 - 256). So the value of ch will be (char)65 which happens to be 'A'.</p>
+	<p>The assignment of a floating point type to an integer type will drop the fractional part of the number. The following code will set i to the value 3. This happens when assigning a floating point number to an integer or passing a floating point number to a function which takes an integer.</p>
+
+	<p class="mono top">double pi;</p>
+	<p class="mono">int i;</p>
+	
+	<p class="mono top">pi = 3.14159;</p>
+	<p class="mono">i = pi;&#160;&#160;// truncation of a double to fit in an int</p>
+	<p class="mono">// i is now 3</p>
+
+	<h1 class="subheading">Pitfall -- int vs. float Arithmetic</h1>
+	<p class="noindent">Here's an example of the sort of code where int vs. float arithmetic can cause problems. Suppose the following code is supposed to scale a homework score in the range 0..20 to be in the range 0..100.</p>
+
+	<p class="mono top">{</p>
+	<p class="mono">&#160;&#160;&#160;int score;</p>
+	<p class="mono">...// suppose score gets set in the range 0..20 somehow</p>
+	<p class="mono">&#160;&#160;&#160;score = (score / 20) * 100;&#160;&#160;// NO -- score/20 truncates to 0</p>
+	<p class="mono">...</p>
+
+	<p class="noindent top">Unfortunately, score will almost always be set to 0 for this code because the integer division in the expression (<span class="mono">score/20</span>) will be 0 for every value of score less than 20. The fix is to force the quotient to be computed as a floating point number...</p>
+
+	<p class="mono top">score = ((double)score / 20) * 100;&#160;&#160;// OK -- floating point division from cast</p>
+	<p class="mono">score = (score / 20.0) * 100;&#160;&#160;// OK -- floating point division from 20.0</p>
+	<p class="mono">score = (int)(score / 20.0) * 100;&#160;&#160;// NO -- the (int) truncates the floating // quotient back to 0</p>
+
+	<h1 class="subheading">No Boolean -- Use int</h1>
+	<p class="noindent">C does not have a distinct boolean type-- int is used instead. The language treats integer 0 as false and all non-zero values as true. So the statement...</p>
+
+	<p class="top mono">i = 0;</p>
+	<p class="mono">while (i - 10) {</p>
+	<p class="mono">&#160;&#160;...</p>
+
+	<p class="noindent top">will execute until the variable i takes on the value 10 at which time the expression (<span class="mono">i - 10</span>) will become false (i.e. 0). (we'll see the while() statement a bit later)</p>
 
 </body>
 </html>

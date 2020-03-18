@@ -657,6 +657,14 @@ div.split-page
 	width: 100%;
 }
 
+span.var-box
+{
+	border: 2px solid #000;
+	margin: 0em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+}
+
 hr.heading-line
 {
 	width: 4em;
