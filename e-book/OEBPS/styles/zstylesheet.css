@@ -12,10 +12,31 @@ Use ems instead of percentages.
 /*Fonts*/
 
 @font-face {
-	font-family: "Hack";
+	font-family: "JetBrains Mono";
 	font-style: normal;
 	font-weight: normal;
-	src: url("../fonts/Hack-Regular.otf");
+	src: url("../fonts/JetBrainsMonoNL-Regular.ttf");
+}
+
+@font-face {
+	font-family: "JetBrains Mono Italic";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/JetBrainsMonoNL-Italic.ttf");
+}
+
+@font-face {
+	font-family: "JetBrains Mono Bold";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/JetBrainsMonoNL-Bold.ttf");
+}
+
+@font-face {
+	font-family: "JetBrains Mono Bold Italic";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/JetBrainsMonoNL-BoldItalic.ttf");
 }
 
 /*Cover*/
@@ -314,7 +335,7 @@ p.sans, .sans {
 }
 
 p.mono, .mono {
-	font-family: "Hack", monospace;
+	font-family: "JetBrains Mono", monospace;
 }
 
 p.location {
